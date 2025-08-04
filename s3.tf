@@ -8,10 +8,10 @@ variable "tags" {
 }
 
     versioning {
-        enabled = var.versioning
+        enabled = true
     }
      
-    tags = var.tags
+    tags = { var.tags
     }
 
 resource "aws_s3_bucket" "my-s3-bucket" {
@@ -24,4 +24,5 @@ resource "aws_s3_bucket" "my-s3-bucket" {
 
   tags = var.tags
 }
+
 
